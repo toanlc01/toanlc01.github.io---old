@@ -1,0 +1,116 @@
+https://www.youtube.com/watch?v=ZFQkb26UD1Y
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Hero Section */
+#hero {
+    background-image: url(./images/203B642D-F97C-4FF5-A067-084E4DBDC1B8_1_105_c.jpeg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: .7;
+    z-index: -1;
+}
+
+#hero h1 {
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text-reveal 1s ease forwards;
+    animation-delay: 1s;
+
+}
+
+#hero h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgb(151, 147, 147);
+    animation: text-box 1s ease;
+    animation-delay: 1s;
+}
+
+#hero .cta {
+    display: inline-block;
+    padding: 10px 30px;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 20px;
+    transition: .5s ease;
+    transition-property: color, background-color;
+}
+
+#hero .cta:hover {
+    color: black;
+    background-color: rgb(102, 170, 102);
+}
+
+
+/* End Hero Section */
+
+
+/* Keyframes */
+@keyframes text-box {
+    0% {
+        width: 100%;
+        left: 0;
+    }
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+@keyframes text-reveal {
+    100% {
+        color: white;
+    }
+}
+
+/* End Keyframes */
+
+
+
+
